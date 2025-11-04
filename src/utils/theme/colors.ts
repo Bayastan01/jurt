@@ -1,0 +1,19 @@
+export const colors = {
+  main: '#3B82F6',
+  accent: '#3F51B5',
+  box: '#EFEFEF',
+  red: '#ff0033',
+  green: '#0ba484',
+  black: '#000000',
+  'black-2': '#16171B',
+  white: '#FFFFFF',
+  'white-2': '#F1F1F1',
+  text: '#202427',
+  grey: '#8a8a8a',
+  'text-2': '#3AAFD2',
+  blur: 'rgba(112,112,112,0.13)',
+  blue: '#3AAFD2',
+  textInput: '#C0C0C0',
+  grayLight:'#777',
+   input:'#E6F7FF'
+};
