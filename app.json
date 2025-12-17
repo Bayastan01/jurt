@@ -25,6 +25,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+    [
+      "expo-splash-screen",
+      {
+        "image": "./assets/images/splash-icon.png"
+      }
+    ]
+  ]
   }
 }

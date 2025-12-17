@@ -56,8 +56,17 @@ import Sms from './sms.svg'
 import { hitSlop } from '../../utils/theme/stringHelpers'
 import { colors } from '../../utils/theme/colors'
 import arrowdown from './arrow-down.svg'
-
+import Calendar from './calendar.svg'
+import Commercial from './commercial.svg'
+import HomeModern from './home-modern.svg'
+import BaselineHomeWork from './baseline-home-work.svg'
+import StorageRental from './storage-rental.svg'
+import Wallet from './wallet.svg'
+import Settings from './settings-adjust.svg'
+import Workflow from './workflow.svg'
 export const icons = {
+  calendar:Calendar,
+  wallet:Wallet,
   sms: Sms,
   arrowdown: arrowdown,
   promoCodes: PromoCodes,
@@ -88,6 +97,12 @@ export const icons = {
   logout: Logout,
   burger: Burger,
   back: Back,
+  commercial:Commercial,
+  workflow:Workflow,
+  'settings-adjust':Settings,
+  'storage-rental':StorageRental,
+  'baseline-home-work':BaselineHomeWork,
+  'home-modern':HomeModern,
   'delete-user': DeleteUser,
   'remove-account': RemoveAccount,
   'credit-card': CreditCard,
@@ -121,23 +136,10 @@ export type IconProps = SvgProps & {
   touchable?: boolean
 }
 
-export const Icon = ({ type, touchable, fill = colors['text-2'], ...rest }: IconProps) => {
+export const Icon = ({ type, touchable, fill = colors['main'], ...rest }: IconProps) => {
   const SelectedIcon = icons[type]
-
   if (!SelectedIcon) {
     console.warn(`Icon: нет иконки с ключом "${type}". Проверьте, что "${type}" есть в icons.`)
-    return null
-  }
-
-  // Если иконка загружена как число (ID ресурса) - это ошибка конфигурации
-  if (typeof SelectedIcon === 'number') {
-    console.warn(`Icon: иконка с ключом "${type}" загружена как число (ID ресурса). Проверьте конфигурацию SVG.`)
-    return null
-  }
-
-  // Если это не функция (не компонент) - тоже ошибка
-  if (typeof SelectedIcon !== 'function') {
-    console.warn(`Icon: иконка с ключом "${type}" не является функцией (компонентом). Тип: ${typeof SelectedIcon}`)
     return null
   }
 

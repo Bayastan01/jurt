@@ -15,5 +15,6 @@ export const colors = {
   blue: '#3AAFD2',
   textInput: '#C0C0C0',
   grayLight:'#777',
-   input:'#E6F7FF'
+   input:'#E6F7FF',
+   boxx:'rgb(221, 220, 220)'
 };
